@@ -1,0 +1,26 @@
+<ion-view view-title="Mesa Labels">
+  <ion-content>
+    <h1>Print Labels for Mesa</h1>
+    <h3>Press Add Item button and scan barcode to add item to the queue.</h3>
+    
+    <label class="item item-input">
+    <input type="text" placeholder="Barcode" ng-model="barcode">
+    </label><br>
+    
+    <button class="button button-full button-positive" ng-click="additem(barcode)">
+      Add Item
+    </button>
+    
+    <ion-list>
+      <ion-item class="item" ng-repeat="x in labels">
+		                <h2>{{x.barcode}}</h2><br/>
+    </ion-item>
+    </ion-list>
+    
+    <br>
+    <button class="button button-full button-positive" ng-click="finalsubmit()">
+      Final Submit
+    </button>
+    
+  </ion-content>
+</ion-view>
